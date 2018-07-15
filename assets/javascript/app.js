@@ -36,7 +36,6 @@ function renderButtons(){
 	});
 }
 
-//animates and pauses gif on hover
 $(document).on('mouseover','.playOnHover', function(){
  	   	$(this).attr('src', $(this).data('animated'));
  });
@@ -44,7 +43,6 @@ $(document).on('mouseover','.playOnHover', function(){
  	   	$(this).attr('src', $(this).data('paused'));
  });
 
-//sets a button from input
 $('#addGif').on('click', function(){
 	var newGif = $('#nerdInput').val().trim();
 	topics.push(newGif);
