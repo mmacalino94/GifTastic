@@ -1,35 +1,18 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Pop Culture: Let's Get Nerdy!</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="assets/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Pop Culture GIF's: Let's Get Nerdy!!</h1>
+    <h1>Pop Culture GIF's: Nerds Unite!!</h1>
     <div class='container'>
         <div class='row'>
-            <button data-nerd="sailor moon">Sailor Moon</button>
-            <button data-nerd="zelda">Legend of Zelda</button>
-            <button data-nerd="naruto">Naruto</button>
-            <button data-nerd="Pokemon">Pokemon</button>
-            <button data-nerd="kingdom hearts">Kingdom Hearts</button>
-            <button data-nerd="final fantasy">Final fantasy</button>
-            <button data-nerd="violet evergarden">Violet Evergarden</button>
-            <button data-nerd="a silent voice">A Silent Voice</button>
-            <button data-nerd="Playstation"></button>
-            <button data-nerd="Nintendo"></button> 
-            <button data-nerd=""></button> 
-            <button data-nerd=""></button> 
-            <button data-nerd=""></button> 
-            <button data-nerd=""></button> 
-            <button data-nerd=""></button> 
-            <button data-nerd=""></button> 
-            <button data-nerd=""></button> 
-            
+            <div id="nerd-button"></div>  
         </div>
         <div class='row'>
             <div class='col-lg-9'>
@@ -37,8 +20,8 @@
             </div>
             <div class='col-lg-3'>
                 <form id='TV-form'>
-                    <label for='newShowInput'>Add More Pop Culture GIF's!!</label>
-                    <input type='text' id='newShowInput'>
+                    <label for='nerdInput'>Add More Pop Culture GIF's!!</label>
+                    <input type='text' id='nerdInput'>
                     <br>
                     <input id='addShow' type='submit' value='Submit'>
                 </form>
@@ -49,7 +32,49 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/main.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TV GIF GALORE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Nerds Unite Gifs!!</h1>
+    <div class='container'>
+        <div class='row'>
+            <div id='nerd-button'></div>
+        </div>
+        <div class='row'>
+            <div class='col-lg-9'>
+                <div class='display'></div>
+            </div>
+            <div class='col-lg-3'>
+                <form id='nerd-form'>
+                    <label for='nerdInput'>Add your favorite TV show</label>
+                    <input class="form-control" type="text" placeholder="Default input">
+                    <input id="add-gif" type='submit' value='Submit'>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer><img src='assets/images/PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif' id='giphyLogo'></footer>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="assets/javascript/main.js"></script>
+</body>
+
+</html>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
