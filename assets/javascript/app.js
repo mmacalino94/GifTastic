@@ -14,9 +14,9 @@ function buttonClicked() {
 function submitButtonClicked() {
     var userInput = $('#nerd-input').val();
 
-    if (userInput) {
-        $("#nerd-button").append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
-    }
+    // if (userInput) {
+    //     $("#nerd-button").append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
+    // }
 }
 
 function searchGif(gifName) {
@@ -35,7 +35,7 @@ function displayGif(response) {
         var rating = "<div class='ratings'> Rating:  " + (response.data[i].rating) + " </div>";
         var image = rating + '<img src= " ' + response.data[i].images.fixed_height_still.url +
             '" data-still=" ' + response.data[i].images.fixed_height_still.url +
-            ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage" style= "width:250px; height:250px">';
+            ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage" style= "width:250px; height:250px;">';
 
         image = '<div class="col-md-4">' + image + "</div>";
         $('.display').append(image);
@@ -53,13 +53,12 @@ function displayGif(response) {
 
     });
 
-    $("add-gif").on('click', function(event){
+    $("#add-gif").on('click', function(event){
         event.preventDefault();
         var newNerd = $('#nerdInput').val().trim();
         topics.push(newNerd);
-        createButtons();
-        return false;
+        renderButtons();
     });
 
-    renderButtons();
+ 
 }
