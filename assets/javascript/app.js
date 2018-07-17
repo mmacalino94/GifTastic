@@ -28,7 +28,9 @@ function renderButtons(){
 					thisRating = 'unrated';
 				}
 				var rating = $('<h5>').html('Rated: '+thisRating).addClass('ratingStyle');
-				stillGif= $('<img>').attr('data-animated', animateGif).attr('data-paused', pauseGif).attr('src', pauseGif).addClass('playOnHover');
+				
+				stillGif= $('<img>').attr('data-animate', animateGif).attr('data-pause', pauseGif).attr('src', pauseGif).addClass('playOnHover');
+				
 				var fullGifDisplay = $('<button>').append(rating, stillGif);
 				$('.display').append(fullGifDisplay);
 			});
@@ -37,10 +39,10 @@ function renderButtons(){
 }
 
 $(document).on('mouseover','.playOnHover', function(){
- 	   	$(this).attr('src', $(this).data('animated'));
+ 	   	$(this).attr('src', $(this).data('animate'));
  });
  $(document).on('mouseleave','.playOnHover', function(){
- 	   	$(this).attr('src', $(this).data('paused'));
+ 	   	$(this).attr('src', $(this).data('pause'));
  });
 
 $('#addGif').on('click', function(){
