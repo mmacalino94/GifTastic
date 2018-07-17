@@ -38,11 +38,15 @@ function renderButtons(){
 	});
 }
 
-$(document).on('mouseover','.playOnHover', function(){
- 	   	$(this).attr('src', $(this).data('animate'));
- });
- $(document).on('mouseleave','.playOnHover', function(){
- 	   	$(this).attr('src', $(this).data('pause'));
+$(".display").on("click", function()	{
+var state = $(this).attr("data-state");
+if (state == "still")	{
+	$(this).attr('src', $(this).data('animated'));
+	$(this).attr('data-state', 'animate');
+} else{
+	$(this).attr("src", $(this).attr("data-still"));
+	$(this).attr("data-state", "still");
+}
  });
 
 $('#addGif').on('click', function(){
