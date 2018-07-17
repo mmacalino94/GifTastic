@@ -4,7 +4,7 @@ var currentGif;
 var animateGif;
 var stillGif;
 var pauseGif;
-//creates buttons
+
 function renderButtons(){
 	$('#nerd-button').empty();
 	for(var i = 0; i < topics.length; i++){
@@ -16,7 +16,7 @@ function renderButtons(){
 		$('.display').empty();
 
         var thisShow = $(this).data('name');
-		var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + thisShow + "&limit=10&api_key=dc6zaTOxFJmzC";
+		var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + thisShow + "&limit=12&api_key=dc6zaTOxFJmzC";
 		$.ajax({url: giphyURL, method: 'GET'}).done(function(giphy){
 			currentGif = giphy.data;
 			$.each(currentGif, function(index,value){
