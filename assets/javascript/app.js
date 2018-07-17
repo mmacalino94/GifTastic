@@ -29,7 +29,7 @@ function renderButtons(){
 				}
 				var rating = $('<h5>').html('Rated: '+thisRating).addClass('ratingStyle');
 				
-				stillGif= $('<img>').attr('data-animate', animateGif).attr('data-pause', pauseGif).attr('src', pauseGif).addClass('playOnHover');
+				stillGif= $('<img>').attr('data-animate', animateGif).attr('data-pause', pauseGif).attr('src', pauseGif).addClass('movImage');
 				
 				var fullGifDisplay = $('<button>').append(rating, stillGif);
 				$('.display').append(fullGifDisplay);
@@ -38,10 +38,10 @@ function renderButtons(){
 	});
 }
 
-$(".display").on("click", function()	{
+$(".movImage").on("click", function()	{
 var state = $(this).attr("data-state");
 if (state == "still")	{
-	$(this).attr('src', $(this).data('animated'));
+	$(this).attr('src', $(this).data('data-animate'));
 	$(this).attr('data-state', 'animate');
 } else{
 	$(this).attr("src", $(this).attr("data-still"));
